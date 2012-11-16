@@ -28,3 +28,17 @@
 	</ul>
 </div>
 </portal-logic:if>
+<script id="JS_jQuery" src="/CustomThemeStatic/themes/Portal8.0/js/jquery.js"></script>
+<script id="JS_BootstrapTransition" src="/CustomThemeStatic/themes/Portal8.0/js/bootstrap-transition.js"></script>
+<script id="JS_BootstrapAlert" src="/CustomThemeStatic/themes/Portal8.0/js/bootstrap-alert.js"></script>
+<script id="JS_BootstrapModal" src="/CustomThemeStatic/themes/Portal8.0/js/bootstrap-modal.js"></script>
+<script id="JS_BootstrapDropdown" src="/CustomThemeStatic/themes/Portal8.0/js/bootstrap-dropdown.js"></script>
+<script id="JS_BootstrapScrollspy" src="/CustomThemeStatic/themes/Portal8.0/js/bootstrap-scrollspy.js"></script>
+<script id="JS_BootstrapTab" src="/CustomThemeStatic/themes/Portal8.0/js/bootstrap-tab.js"></script>
+<script id="JS_BootstrapTooltip" src="/CustomThemeStatic/themes/Portal8.0/js/bootstrap-tooltip.js"></script>
+<script id="JS_BootstrapPopover" src="/CustomThemeStatic/themes/Portal8.0/js/bootstrap-popover.js"></script>
+<script id="JS_BootstrapButton" src="/CustomThemeStatic/themes/Portal8.0/js/bootstrap-button.js"></script>
+<script id="JS_BootstrapCollapse" src="/CustomThemeStatic/themes/Portal8.0/js/bootstrap-collapse.js"></script>
+<script id="JS_BootstrapCarousel" src="/CustomThemeStatic/themes/Portal8.0/js/bootstrap-carousel.js"></script>
+<script id="JS_BootstrapTypeahead" src="/CustomThemeStatic/themes/Portal8.0/js/bootstrap-typeahead.js"></script>
+<script id="JS_BootstrapAffix" src="/CustomThemeStatic/themes/Portal8.0/js/bootstrap-affix.js"></script>
