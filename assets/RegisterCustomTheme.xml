@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<request type="update" version="8.0.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="PortalConfig_8.0.0.xsd">
+    <portal action="locate">
+	
+	<skin action="update" active="true" default="false" domain="rel" objectid="ibm.portal.80StandardCustom" uniquename="ibm.portal.80StandardCustom" resourceroot="ibm.portal.80StandardCustom" context-root="/CustomThemeStatic" type="default">
+		<localedata locale="en">
+			<title>Custom Theme - Standard</title>
+		</localedata>
+		<parameter name="com.ibm.portal.skintype" type="string" update="set"><![CDATA[template]]></parameter> 
+		<parameter name="com.ibm.portal.skin.template.ref" type="string" update="set"><![CDATA[res:/CustomThemeStatic/skins/Standard/]]></parameter>
+		<parameter name="com.ibm.portal.skin.template.file.name.html" type="string" update="set"><![CDATA[skin.html]]></parameter> 
+	</skin>
+
+	<skin action="update" active="true" default="false" domain="rel" objectid="ibm.portal.80NoSkinCustom" uniquename="ibm.portal.80NoSkinCustom" resourceroot="ibm.portal.80NoSkinCustom" context-root="/CustomThemeStatic" type="default">
+		<localedata locale="en">
+			<title>Custom Theme - NoSkin</title>
+		</localedata>
+		<parameter name="com.ibm.portal.skintype" type="string" update="set"><![CDATA[template]]></parameter> 
+		<parameter name="com.ibm.portal.skin.template.ref" type="string" update="set"><![CDATA[res:/CustomThemeStatic/skins/NoSkin/]]></parameter>
+		<parameter name="com.ibm.portal.skin.template.file.name.html" type="string" update="set"><![CDATA[skin.html]]></parameter> 
+	</skin>
+
+	<skin action="update" active="true" default="false" domain="rel" objectid="ibm.portal.80HiddenCustom" uniquename="ibm.portal.80HiddenCustom" resourceroot="ibm.portal.80HiddenCustom" context-root="/CustomThemeStatic" type="default">
+		<localedata locale="en">
+			<title>Custom Theme - Hidden</title>
+		</localedata>
+		<parameter name="com.ibm.portal.skintype" type="string" update="set"><![CDATA[template]]></parameter> 
+		<parameter name="com.ibm.portal.skin.template.ref" type="string" update="set"><![CDATA[res:/CustomThemeStatic/skins/Hidden/]]></parameter>
+		<parameter name="com.ibm.portal.skin.template.file.name.html" type="string" update="set"><![CDATA[skin.html]]></parameter> 
+	</skin>
+
+
+        <skin action="locate" domain="rel" objectid="ibm.portal.80StandardCustom.objectID" uniquename="ibm.portal.80StandardCustom"/>
+        <skin action="locate" domain="rel" objectid="ibm.portal.80NoSkinCustom.objectID" uniquename="ibm.portal.80NoSkinCustom"/>
+ 	<skin action="locate" domain="rel" objectid="ibm.portal.80HiddenCustom.objectID" uniquename="ibm.portal.80HiddenCustom"/>
+
+        <theme action="update" active="true" context-root="/CustomThemeDynamic" default="false" defaultskinref="ibm.portal.80StandardCustom.objectID" domain="rel"  resourceroot="dynamicSpots" uniquename="ibm.portal.custom.theme8">        
+            <localedata locale="en">
+                <title>Custom Theme</title>
+            </localedata>
+
+            <allowed-skin skin="ibm.portal.80StandardCustom.objectID" update="set"/>
+            <allowed-skin skin="ibm.portal.80NoSkinCustom.objectID" update="set"/>
+	    <allowed-skin skin="ibm.portal.80HiddenCustom.objectID" update="set"/>
+
+ 	    <parameter name="com.ibm.portal.theme.dnd.sources" type="string" update="set"><![CDATA[ibmDndColumn:com.ibm.pb.dnd.layout.LayoutColumnSource:vertical,ibmDndRow:com.ibm.pb.dnd.layout.LayoutRowSource:horizontal]]></parameter>
+            <parameter name="com.ibm.portal.theme.aggregationmodes" type="string" update="set"><![CDATA[ssa]]></parameter>
+
+            <parameter name="com.ibm.portal.layout.template.href" type="string" update="set"><![CDATA[war:CustomThemeStatic/themes/Portal8.0/layout-templates/2ColumnEqual/]]></parameter>
+            <parameter name="com.ibm.portal.theme.template.ref" type="string" update="set"><![CDATA[war:CustomThemeStatic/themes/Portal8.0/]]></parameter>
+            <parameter name="resourceaggregation.profile" type="string" update="set"><![CDATA[profiles/profile_deferred.json]]></parameter>
+        </theme>
+
+    </portal>
+</request>
