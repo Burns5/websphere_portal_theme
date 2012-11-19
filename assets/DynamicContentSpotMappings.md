@@ -25,6 +25,12 @@
 * res:/CustomThemeDynamic/themes/html/dynamicSpots/navigation.jsp?rootClass=wpthemePrimaryNav%20wpthemeLeft&startLevel=1
 * URL to the primary navigation dynamic content spot in modularized themes.
 
+###### CustomTheme_projectMenu ######
+* res:/CustomThemeDynamic/themes/html/dynamicSpots/projectMenu.jsp,wp_project_menu 
+
+###### CustomTheme_search ######
+* res:/CustomThemeDynamic/themes/html/dynamicSpots/search.jsp
+
 ###### CustomTheme_secondaryNav ######
 * res:/CustomThemeDynamic/themes/html/dynamicSpots/navigation.jsp?rootClass=wpthemeSecondaryNav&startLevel=2&levelsDisplayed=2
 * URL to the secondary navigation dynamic content spot in modularized themes.

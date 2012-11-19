@@ -5,27 +5,23 @@
 <%@ include file="../includePortalTaglibs.jspf" %>
 
 <c:if test="${fn:length(wp.selectionModel.selectionPath) > (param.startLevel+1)}">
-<div class="${param.rootClass} wpthemeLeft">
+<ul class="${param.rootClass} breadcrumb">
 	<c:forEach var="node" items="${wp.selectionModel.selectionPath}" begin="${param.startLevel}">
 		<c:set var="nodeID" value="${wp.identification[node]}"/>
-		<c:set var="separator" value="&gt;" />
+		<c:set var="separator" value="/" />
 		<c:if test="${!node.metadata['com.ibm.portal.Hidden']}">
-			<c:if test="${isTrailStarted}">
-				<span class="wpthemeCrumbTrailSeparator">${separator}</span>
-			</c:if>
 			<c:choose>
 				<c:when test="${wp.identification[wp.selectionModel.selected] == nodeID}">
-					<strong><span class="wpthemeSelected" lang="${node.title.xmlLocale}" dir="${node.title.direction}"><c:choose><c:when test="${node.projectID != null}">(<c:out value="${node.title}"/>)</c:when><c:otherwise><c:out value="${node.title}"/></c:otherwise></c:choose></span></strong>
+					<li class="active" lang="${node.title.xmlLocale}" dir="${node.title.direction}"><c:choose><c:when test="${node.projectID != null}">(<c:out value="${node.title}"/>)</c:when><c:otherwise><c:out value="${node.title}"/></c:otherwise></c:choose></li>
 				</c:when>
 				<c:when test="${node.contentNode.contentNodeType == 'LABEL'}">
-					<span lang="${node.title.xmlLocale}" dir="${node.title.direction}"><c:choose><c:when test="${node.projectID != null}">(<c:out value="${node.title}"/>)</c:when><c:otherwise><c:out value="${node.title}"/></c:otherwise></c:choose></span>
+					<li lang="${node.title.xmlLocale}" dir="${node.title.direction}"><c:choose><c:when test="${node.projectID != null}">(<c:out value="${node.title}"/>)</c:when><c:otherwise><c:out value="${node.title}"/></c:otherwise></c:choose></li>
 				</c:when>
 				<c:otherwise>
-					<a href="?uri=nm:oid:${nodeID}"><span lang="${node.title.xmlLocale}" dir="${node.title.direction}"><c:choose><c:when test="${node.projectID != null}">(<c:out value="${node.title}"/>)</c:when><c:otherwise><c:out value="${node.title}"/></c:otherwise></c:choose></span></a>
+					<li><a href="?uri=nm:oid:${nodeID}" lang="${node.title.xmlLocale}" dir="${node.title.direction}"><c:choose><c:when test="${node.projectID != null}">(<c:out value="${node.title}"/>)</c:when><c:otherwise><c:out value="${node.title}"/></c:otherwise></c:choose></a> <span class="divider">${separator}</span></li>
 				</c:otherwise>
 			</c:choose>
-			<c:set var="isTrailStarted" value="true" />
 		</c:if>
 	</c:forEach>
-</div>
+</ul>
 </c:if>

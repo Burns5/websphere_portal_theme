@@ -7,7 +7,8 @@
 <portal-core:constants/><portal-core:defineObjects/>
 <%-- Renders links for Login/Logout and Help that are shown in the banner --%>
 
-	<ul class="wpthemeCommonActions wpthemeRight">
+	<ul class="nav">
+	<!-- <ul class="wpthemeCommonActions wpthemeRight"> -->
 		<portal-logic:if loggedIn="yes">
 		<%-- Username is used as a link to 'Edit My Profile' --%>
 		<li class="wpthemeFirst">	
@@ -19,18 +20,18 @@
 	    </portal-navigation:urlGeneration>
 	    </portal-internal:adminlinkinfo>
 		</li>
-		<li>
+		<li class="dropdown">
 		<%--
 		This creates the Actions context menu for page actions.  We use the
 		&#36; HTML entity to encode the $ character so that it won't be interpreted
 		as a JSP expression here and will show up as literals.
 		--%>
             <c:if test="${!wpthemeWAI}" >
-            <span tabindex="0" aria-labelledby="wpContextMenu" role="button" aria-haspopup="true" class="wpthemeMenuAnchor wpthemeActionDisabled"
+            <span tabindex="0" aria-labelledby="wpContextMenu" role="button" aria-haspopup="true" class="dropdown-toggle wpthemeMenuAnchor wpthemeActionDisabled"
                 onclick="javascript:if (typeof wptheme != 'undefined') wptheme.contextMenu.init(this, 'pageAction', {'navID':ibmCfg.portalConfig.currentPageOID});"
                 onmousemove="javascript:if (typeof i$ != 'undefined' && typeof wptheme != 'undefined') { i$.removeClass(this,'wpthemeActionDisabled'); this.onmousemove = null; }"
                 onkeydown="javascript:if (typeof i$ != 'undefined' && typeof wptheme != 'undefined') {if (event.keyCode ==13) {wptheme.contextMenu.init(this, 'pageAction', {'navID':ibmCfg.portalConfig.currentPageOID});}}">
-                <span class="wpthemeUnderlineText wpthemeMenuFocus" id="wpContextMenu"><portal-fmt:text key='theme_actions' bundle='nls8.Theme'/></span>
+                <a href="#" class="" id="wpContextMenu"><portal-fmt:text key='theme_actions' bundle='nls8.Theme'/> <b class="caret"></b></a>
                 <span class="wpthemeMenuRight">
                     <div class="wpthemeMenuBorder">
                         <div class="wpthemeMenuNotchBorder"></div>
@@ -77,20 +78,4 @@
 		</li>
 		</c:if>
 		</portal-logic:if>
-		<%-- Help icon - only displayed for all authenticated users --%>
-		<portal-logic:if loggedIn="yes">
-		<li>
-			<a id="wpthemeHelpAnchor" class="wpthemeHelp" href="javascript:void(0);" onclick="javascript:window.open('/wps/iehs/topic/com.ibm.wp.admin.help/admin/h_wp_admin_welcome.html','wpthemeHelp','width=800,height=600')" aria-label="<portal-fmt:text key="help.title" bundle="nls.commonUI"/>" aria-haspopup="true" role="button">
-				<img src="${themeConfig['resources.modules.ibm.contextRoot']}/themes/html/dynamicSpots/icons/blank.gif" alt="">
-                <span class="wpthemeAltText"><portal-fmt:text key="help.title" bundle="nls.commonUI"/></span>
-			</a>
-		</li>
-		</portal-logic:if>
-		<%-- Logo --%>
-		<li class="wpthemeLast">
-			<span class="wpthemeBranding">
-				<img src="${themeConfig['resources.modules.ibm.contextRoot']}/themes/html/dynamicSpots/icons/blank.gif" alt="<portal-fmt:text key="theme.ibmLogo" bundle="nls.commonUI"/>">
-				<span class="wpthemeAltText"><portal-fmt:text key="theme.ibmLogo" bundle="nls.commonUI"/></span>
-			</span>
-		</li>
 	</ul>

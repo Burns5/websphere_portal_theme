@@ -587,11 +587,11 @@ dir=dir.toLowerCase();
 dir="";
 }
 if(!(dir=="rtl")){
-_7c.style.left=((_7b)?_7e[0]+_7a.offsetWidth:_7e[0])+"px";
+_7c.style.left=((_7b)?_7e[0]+_7a.offsetWidth:_7e[0]-16)+"px";
 }else{
-_7c.style.left=((_7b)?_7e[0]+_7a.offsetWidth-_7a.scrollWidth:_7e[0])+"px";
+_7c.style.left=((_7b)?_7e[0]+_7a.offsetWidth-_7a.scrollWidth:_7e[0]-16)+"px";
 }
-_7c.style.top=_7e[1]+"px";
+_7c.style.top=(_7e[1]+8)+"px";
 },_adjustScreenPositionStart:function(){
 return document.documentElement.scrollHeight;
 },_adjustScreenPositionEnd:function(_80){

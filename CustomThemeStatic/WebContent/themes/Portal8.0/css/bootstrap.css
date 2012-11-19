@@ -324,6 +324,131 @@ a:hover {
   margin-left: 100px;
 }
 
+.row {
+  margin-left: -20px;
+  *zoom: 1;
+}
+
+.row:before,
+.row:after {
+  display: table;
+  line-height: 0;
+  content: "";
+}
+
+.row:after {
+  clear: both;
+}
+
+[class*="span"] {
+  float: left;
+  min-height: 1px;
+  margin-left: 20px;
+}
+
+.container,
+.navbar-static-top .container,
+.navbar-fixed-top .container,
+.navbar-fixed-bottom .container {
+  width: 936px;
+}
+
+.span12 {
+  width: 936px;
+}
+
+.span11 {
+  width: 856px;
+}
+
+.span10 {
+  width: 776px;
+}
+
+.span9 {
+  width: 696px;
+}
+
+.span8 {
+  width: 616px;
+}
+
+.span7 {
+  width: 536px;
+}
+
+.span6 {
+  width: 456px;
+}
+
+.span5 {
+  width: 376px;
+}
+
+.span4 {
+  width: 296px;
+}
+
+.span3 {
+  width: 216px;
+}
+
+.span2 {
+  width: 136px;
+}
+
+.span1 {
+  width: 56px;
+}
+
+.offset12 {
+  margin-left: 980px;
+}
+
+.offset11 {
+  margin-left: 900px;
+}
+
+.offset10 {
+  margin-left: 820px;
+}
+
+.offset9 {
+  margin-left: 740px;
+}
+
+.offset8 {
+  margin-left: 660px;
+}
+
+.offset7 {
+  margin-left: 580px;
+}
+
+.offset6 {
+  margin-left: 500px;
+}
+
+.offset5 {
+  margin-left: 420px;
+}
+
+.offset4 {
+  margin-left: 340px;
+}
+
+.offset3 {
+  margin-left: 260px;
+}
+
+.offset2 {
+  margin-left: 180px;
+}
+
+.offset1 {
+  margin-left: 100px;
+}
+
 .row-fluid {
   width: 100%;
   *zoom: 1;
@@ -4168,7 +4293,7 @@ input[type="submit"].btn.btn-mini {
 .navbar {
   *position: relative;
   *z-index: 2;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   overflow: visible;
   color: #777777;
 }
@@ -4409,7 +4534,9 @@ input[type="submit"].btn.btn-mini {
   float: left;
 }
 
-.navbar .nav > li > a {
+.navbar .nav > li > a,
+.navbar .nav > li > span,
+.navbar .nav > li > span > a {
   float: none;
   padding: 10px 15px 10px;
   color: #777777;
@@ -4728,10 +4855,6 @@ input[type="submit"].btn.btn-mini {
   padding: 8px 15px;
   margin: 0 0 20px;
   list-style: none;
-  background-color: #f5f5f5;
-  -webkit-border-radius: 4px;
-     -moz-border-radius: 4px;
-          border-radius: 4px;
 }
 
 .breadcrumb li {
@@ -5890,4 +6013,17 @@ a.badge:hover {
 
 .affix {
   position: fixed;
+}
+
+.utb-project-info .utb-project-name {
+  font-size: 1.0;
+  font-weight: normal;
+}
+
+.utb-project-info .utb-name {
+  font-size: 1.0;
+}
+
+.utb-project-info .utb-desc {
+  font-size: 0.8em;
 }

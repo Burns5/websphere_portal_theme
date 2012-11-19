@@ -11,54 +11,71 @@
 </head>
 <body class="lotusui30dojo tundra locale_en">	
 	
-	<div class="wpthemeFrame">
+	<div class="container wpthemeFrame">
 		
-		<header role="banner">
+		<!-- <header role="banner"> -->
 
-			<div class="wpthemeHeader">
+			<!-- <div class="wpthemeHeader"> -->
 				<!-- inserts the managed pages preview mode contributions -->
 				<a rel="dynamic-content" href="dyn-cs:id:80theme_preview"></a>
-
-				<div class="wpthemeInner">
-					<div class="wpthemeLogo wpthemeLeft">
-						<span class="wpthemeAltText">IBM WebSphere Portal</span>
-					</div>
-					
-					<!-- renders the top navigation -->
-					<a rel="dynamic-content" href="dyn-cs:id:CustomTheme_topNav"></a>
-					
-					<!-- displays the state of the current page -->
-					<div class="wpthemeRight">
-						<a rel="dynamic-content" href="dyn-cs:id:80theme_projectMenu"></a>
-						<a rel="dynamic-content" href="dyn-cs:id:CustomTheme_pageModeToggle"></a>
+				<div class="navbar navbar-inverse navbar-fixed-top">
+		  			<div class="navbar-inner">
+						<div class="container">
+							<!-- <div class="wpthemeLogo wpthemeLeft">
+								<span class="wpthemeAltText">IBM WebSphere Portal</span>
+							</div> -->
+							
+							<!-- renders the top navigation -->
+							<div class="pull-left">
+								<a class="brand" href="#">IBM WebSphere Portal</a>
+								<a rel="dynamic-content" href="dyn-cs:id:CustomTheme_topNav"></a>
+							</div>
+							
+							<!-- displays the state of the current page -->
+							<div class="pull-right">
+								<a rel="dynamic-content" href="dyn-cs:id:80theme_projectMenu"></a>
+								<a rel="dynamic-content" href="dyn-cs:id:CustomTheme_pageModeToggle"></a>
+							</div>
+						</div>
 					</div>
 				</div>
-			</div><!-- end header -->
+			<!-- </div> --><!-- end header -->
 
 			<!-- inserts the universal toolbar -->
 			<a rel="dynamic-content" href="dyn-cs:id:80theme_toolbar"></a>
+			<div class="wpthemeClear"></div>
+			<!-- <div class="wpthemeBanner">
+				<div class="wpthemeBannerInner"> -->
+					<!-- <div class="container wpthemeInner"> -->
+						<div class="navbar">
+		  					<div class="navbar-inner">
+		  						<div class="container">
+			  						<div class="pull-left">
+										<a rel="dynamic-content" href="dyn-cs:id:CustomTheme_primaryNav"></a>
+									</div>
+			  						<div class="pull-right">
+			  							<a rel="dynamic-content" href="dyn-cs:id:CustomTheme_commonActions"></a>
+			  							<!-- <a rel="dynamic-content" href="dyn-cs:id:CustomTheme_search"></a> -->
+									</div>
+								</div>
+								<!-- <div class="wpthemeClear"></div> -->
+							</div>
+						</div>
+					<!-- </div> -->
+				<!-- </div>
+			</div> --><!--end main banner-->
 			
-			<div class="wpthemeBanner">
-				<div class="wpthemeBannerInner">
-					<div class="wpthemeInner">
-						<a rel="dynamic-content" href="dyn-cs:id:CustomTheme_commonActions"></a>
-						<a rel="dynamic-content" href="dyn-cs:id:CustomTheme_primaryNav"></a>
-						<div class="wpthemeClear"></div>
-					</div>
-				</div>
-			</div><!--end main banner-->
-			
-			<div class="wpthemeSecondaryBanner">
+			<!-- <div class="wpthemeSecondaryBanner">
 				<a rel="dynamic-content" href="dyn-cs:id:CustomTheme_secondaryNav"></a>
 				<div class="wpthemeClear"></div>
-			</div><!--end secondary banner-->
-		</header>
+			</div> --><!--end secondary banner-->
+		<!-- </header> -->
 
 		<div class="wpthemeMainContent" role="main" >
-			<div class="wpthemeInner">	
+			<div class="container wpthemeInner">	
 				<!-- asa markup contributions for pages -->	
 				<a rel="dynamic-content" href="dyn-cs:id:80theme_asa"></a>
-				<a rel="dynamic-content" href="dyn-cs:id:80theme_search"></a>
+				<a rel="dynamic-content" href="dyn-cs:id:CustomTheme_search"></a>
 				<a rel="dynamic-content" href="dyn-cs:id:CustomTheme_crumbTrail"></a>
 				<div class="wpthemeClear"></div>
 				<a rel="dynamic-content" href="dyn-cs:id:CustomTheme_status"></a>
@@ -68,15 +85,15 @@
 			<a rel="dynamic-content" href="state.portlet:portlet?include=windowState&include=portletMode&mime-type=text/html"></a>
 			
 			<div id="layoutContainers" class="wpthemeLayoutContainers wpthemeLayoutContainersHidden" >	
-				<div class="wpthemeInner">					
+				<div class="container wpthemeInner">					
 					<a rel="dynamic-content" href="dyn-cs:id:80theme_layout"></a>
 					<div class="wpthemeClear"></div>
 				</div>
 			</div>
 		</div><!--end main content-->
-		
-		<footer class="wpthemeFooter" role="contentinfo">
-			<div class="wpthemeInner">	
+		<hr />
+		<footer role="contentinfo">
+			<div class="container">
 				<a rel="dynamic-content" href="dyn-cs:id:CustomTheme_footer"></a>
 				<div class="wpthemeClear"></div>
 			</div>

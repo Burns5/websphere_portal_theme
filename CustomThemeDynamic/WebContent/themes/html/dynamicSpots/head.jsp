@@ -5,6 +5,7 @@
 <portal-core:constants/><portal-core:defineObjects/> 
 <%@ include file="../helper.jspf" %>
 <portal-core:stateBase/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title><c:out value='<%=pageContext.getAttribute("pageTitle", PageContext.REQUEST_SCOPE)%>' /></title>
 <portal-core:portletsHeadMarkupElements method="xhtml" filter="title"/>
 <portal-navigation:urlGeneration navigationNode='<%=(String)pageContext.getAttribute("currentNavNodeID", PageContext.REQUEST_SCOPE)%>'>
@@ -30,4 +31,10 @@
 }
 %>
 <link id="CSS_Bootstrap" href="/CustomThemeStatic/themes/Portal8.0/css/bootstrap.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+	body {
+    	padding-top: 60px;
+    	padding-bottom: 40px;
+  	}
+</style>
 <link id="CSS_BootstrapResponsive" href="/CustomThemeStatic/themes/Portal8.0/css/bootstrap-responsive.css" rel="stylesheet" type="text/css" />
