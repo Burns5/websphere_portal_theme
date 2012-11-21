@@ -1,0 +1,10 @@
+<div class="row">
+	<div class="hiddenWidgetsDiv">
+		<!-- widgets in this container are hidden in the UI by default -->
+		<div class="component-container hiddenWidgetsContainer ibmDndRow" name="ibmHiddenWidgets"></div>
+		<div style="clear:both"></div>
+	</div>
+</div>
+<div class="row">
+	<div class="component-container span12" name="ibmMainContainer"></div>
+</div>

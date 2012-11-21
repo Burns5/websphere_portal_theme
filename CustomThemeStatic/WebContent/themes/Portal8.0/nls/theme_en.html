@@ -11,14 +11,14 @@
 </head>
 <body class="lotusui30dojo tundra locale_en">	
 	
-	<div class="container wpthemeFrame">
+	<div class="wwpthemeFrame">
 		
 		<!-- <header role="banner"> -->
 
 			<!-- <div class="wpthemeHeader"> -->
 				<!-- inserts the managed pages preview mode contributions -->
 				<a rel="dynamic-content" href="dyn-cs:id:80theme_preview"></a>
-				<div class="navbar navbar-inverse navbar-fixed-top">
+				<div class="navbar navbar-inverse navbar-fixed-top" style="display:none;">
 		  			<div class="navbar-inner">
 						<div class="container">
 							<!-- <div class="wpthemeLogo wpthemeLeft">
@@ -47,16 +47,20 @@
 			<!-- <div class="wpthemeBanner">
 				<div class="wpthemeBannerInner"> -->
 					<!-- <div class="container wpthemeInner"> -->
-						<div class="navbar">
+						<div class="navbar navbar-fixed-top">
 		  					<div class="navbar-inner">
 		  						<div class="container">
-			  						<div class="pull-left">
-										<a rel="dynamic-content" href="dyn-cs:id:CustomTheme_primaryNav"></a>
-									</div>
-			  						<div class="pull-right">
+			  							<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+										    <span class="icon-bar"></span>
+										    <span class="icon-bar"></span>
+										    <span class="icon-bar"></span>
+										</a>
+										<div class="nav-collapse collapse">
+											<a rel="dynamic-content" href="dyn-cs:id:CustomTheme_primaryNav"></a>
+										</div>
+			  						<!-- <div class="pull-right">
 			  							<a rel="dynamic-content" href="dyn-cs:id:CustomTheme_commonActions"></a>
-			  							<!-- <a rel="dynamic-content" href="dyn-cs:id:CustomTheme_search"></a> -->
-									</div>
+									</div> -->
 								</div>
 								<!-- <div class="wpthemeClear"></div> -->
 							</div>
@@ -70,12 +74,22 @@
 				<div class="wpthemeClear"></div>
 			</div> --><!--end secondary banner-->
 		<!-- </header> -->
+		
+		<div class="container">
+			<div class="pull-left">
+				<img src="/CustomThemeStatic/themes/Portal8.0/img/gp_logo_384.png" />
+			</div>
+			<div class="pull-right">
+				<div style="margin-bottom:16px;"><a rel="dynamic-content" href="dyn-cs:id:CustomTheme_commonActions"></a></div>
+				<a rel="dynamic-content" href="dyn-cs:id:CustomTheme_search"></a>
+			</div>
+		</div>
 
 		<div class="wpthemeMainContent" role="main" >
 			<div class="container wpthemeInner">	
 				<!-- asa markup contributions for pages -->	
 				<a rel="dynamic-content" href="dyn-cs:id:80theme_asa"></a>
-				<a rel="dynamic-content" href="dyn-cs:id:CustomTheme_search"></a>
+				<!-- <a rel="dynamic-content" href="dyn-cs:id:CustomTheme_search"></a> -->
 				<a rel="dynamic-content" href="dyn-cs:id:CustomTheme_crumbTrail"></a>
 				<div class="wpthemeClear"></div>
 				<a rel="dynamic-content" href="dyn-cs:id:CustomTheme_status"></a>
@@ -91,7 +105,7 @@
 				</div>
 			</div>
 		</div><!--end main content-->
-		<hr />
+		<!-- <hr /> -->
 		<footer role="contentinfo">
 			<div class="container">
 				<a rel="dynamic-content" href="dyn-cs:id:CustomTheme_footer"></a>

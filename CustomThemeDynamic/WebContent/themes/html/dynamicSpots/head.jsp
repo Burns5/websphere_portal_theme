@@ -33,8 +33,9 @@
 <link id="CSS_Bootstrap" href="/CustomThemeStatic/themes/Portal8.0/css/bootstrap.css" rel="stylesheet" type="text/css" />
 <style type="text/css">
 	body {
-    	padding-top: 60px;
-    	padding-bottom: 40px;
+    	padding-top: 50px;
+    	/* padding-bottom: 20px; */
   	}
 </style>
 <link id="CSS_BootstrapResponsive" href="/CustomThemeStatic/themes/Portal8.0/css/bootstrap-responsive.css" rel="stylesheet" type="text/css" />
+<link id="CSS_Custom" href="/CustomThemeStatic/themes/Portal8.0/css/custom.css" rel="stylesheet" type="text/css" />

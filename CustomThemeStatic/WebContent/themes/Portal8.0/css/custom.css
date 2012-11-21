@@ -1,0 +1,30 @@
+body {
+	background-image: url('../img/debut_light.png');
+}
+
+footer {
+	border-top: 8px solid #F07318;
+	background-image: url('../img/debut_dark.png');
+}
+
+footer a,footer p,footer h3 {
+	color: #F0F0F0;
+}
+
+footer a:active,footer a:hover {
+	color: #F07318;
+}
+
+footer a img {
+	margin-right: 8px;
+	margin-bottom: 12px;
+	vertical-align: -120%;
+}
+
+.wpthemeMainContent {
+	background: none;
+}
+
+/* div.row.portlets div.component-container {
+	background: #fff;
+} */

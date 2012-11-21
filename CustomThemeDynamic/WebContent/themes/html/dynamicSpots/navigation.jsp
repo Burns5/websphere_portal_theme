@@ -44,9 +44,12 @@
 			</c:if>
 			    <c:set var="primeNode" value="${primeNavigation && wp.selectionModel[node] != null}"/>
 					<li class="wpthemeNavListItem wpthemeLeft<c:if test="${wp.selectionModel[node] != null}"> active wpthemeSelected</c:if>">
-						<a href="?uri=nm:oid:${nodeID}" class="wpthemeLeft<c:if test="${childrenStatus.count == 1}"> wpthemeFirst</c:if>" <c:if test="${primeNode}">data-nm-level="${level+1}" data-nm-primed="<portal-fmt:out><portal-core:navigationNodePriming navigationNode="${nodeID}" metaData="${navHiddenMetadata}" considerChildren="false" includeRoles="true" /></portal-fmt:out>"</c:if>><span lang="${node.title.xmlLocale}" dir="${node.title.direction}"><c:choose><c:when test="${node.projectID != null}">(<c:out value="${node.title}"/>)</c:when><c:otherwise><c:out value="${node.title}"/></c:otherwise></c:choose><c:if test="${selectedNodeID == nodeID}"><span class="wpthemeAccess"> <portal-fmt:text key="currently_selected" bundle="nls8.Theme"/></span></c:if></span></a>
+						<a href="?uri=nm:oid:${nodeID}" class="wpthemeLeft<c:if test="${childrenStatus.count == 1}"> wpthemeFirst</c:if>" <c:if test="${primeNode}">data-nm-level="${level+1}" data-nm-primed="<portal-fmt:out><portal-core:navigationNodePriming navigationNode="${nodeID}" metaData="${navHiddenMetadata}" considerChildren="false" includeRoles="true" /></portal-fmt:out>"</c:if>><span lang="${node.title.xmlLocale}" dir="${node.title.direction}"><c:choose><c:when test="${node.projectID != null}">(<c:out value="${node.title}"/>)</c:when><c:otherwise><c:choose><c:when test="${node.title == 'Home'}">&nbsp;&nbsp;<i class="icon-home"></i>&nbsp;&nbsp;</c:when><c:otherwise><c:out value="${node.title}"/></c:otherwise></c:choose></c:otherwise></c:choose><c:if test="${selectedNodeID == nodeID}"><span class="wpthemeAccess"> <portal-fmt:text key="currently_selected" bundle="nls8.Theme"/></span></c:if></span></a>
 						<portal-dynamicui:closePage node="${node}"><a class="wpthemeClose wpthemeLeft" href="<%closePageURL.write(out);%>"><img alt="X" src="${themeConfig['resources.modules.ibm.contextRoot']}/themes/html/NavigationClose.gif"></a></portal-dynamicui:closePage>
 					</li>
+					<c:if test="${!childrenStatus.last}">
+					<li class="divider-vertical"></li>
+					</c:if>
 				<c:set var="childrenAvailable" value="true"/> 
 		</c:if>
 		</c:forEach>

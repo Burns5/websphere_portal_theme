@@ -6,21 +6,21 @@
 <%@ include file="../helper.jspf" %>
 <portal-core:constants/><portal-core:defineObjects/>
 <%-- Renders links for Login/Logout and Help that are shown in the banner --%>
-
-	<ul class="nav">
+	<div>
+	<!-- <ul class="nav"> -->
 	<!-- <ul class="wpthemeCommonActions wpthemeRight"> -->
 		<portal-logic:if loggedIn="yes">
 		<%-- Username is used as a link to 'Edit My Profile' --%>
-		<li class="wpthemeFirst">	
+		<!-- <li class="wpthemeFirst"> -->
 		<portal-internal:adminlinkinfo name="SELFCARE">
 		<portal-navigation:urlGeneration contentNode="<%=wpsContentNode%>" layoutNode="<%= wpsCompositionNode %>" portletWindowState="Normal" themeTemplate="" portletParameterType="render">
 		<portal-navigation:urlParam type="render" name="ao" value="thm"/>
 		<portal-navigation:urlParam type="render" name="OCN" value="<%= wpsNavigationNodeID %>" />
-			<a href="<%wpsURL.write(escapeXmlWriter);%>"><c:out value="${wp.user[themeConfig['user.displaynameattribute']]}" /></a>
+			<i class="icon-user"></i> Welcome, <a href="<%wpsURL.write(escapeXmlWriter);%>"><c:out value="${wp.user[themeConfig['user.displaynameattribute']]}" /></a>&nbsp;&nbsp;|&nbsp;&nbsp;
 	    </portal-navigation:urlGeneration>
 	    </portal-internal:adminlinkinfo>
-		</li>
-		<li class="dropdown">
+		<!-- </li> -->
+		<div class="dropdown" style="display:none;">
 		<%--
 		This creates the Actions context menu for page actions.  We use the
 		&#36; HTML entity to encode the $ character so that it won't be interpreted
@@ -51,11 +51,13 @@
                 </span>
             </span> 
             </c:if>
-		</li>
+		</div>
+		<%-- My eSchedule --%>
+		<a id="schedulelink" href="eSchedule">My eSchedule</a>&nbsp;&nbsp;|&nbsp;&nbsp;
 		<%-- Logout Link --%>
-		<li>
+		<!-- <li> -->
 			<a id="logoutlink" href="<portal-navigation:url command='LogoutUser' keepNavigationalState='false'/>"><portal-fmt:text key="link.logout" bundle="nls.engine"/></a>
-		</li>
+		<!-- </li> -->
 		</portal-logic:if>
 		<portal-logic:if loggedIn="no">
 		<%-- Sign up Link --%>
@@ -78,4 +80,5 @@
 		</li>
 		</c:if>
 		</portal-logic:if>
-	</ul>
+	<!-- </ul> -->
+	</div>
